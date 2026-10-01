@@ -1,0 +1,10 @@
+# Só o site vai para o repositório público. Documentos internos, copies,
+# partials e fotos originais ficam apenas na máquina.
+/*
+!/.gitignore
+!/.nojekyll
+!/index.html
+!/burnout/
+!/assets/
+/assets/img/originais/
+.DS_Store
