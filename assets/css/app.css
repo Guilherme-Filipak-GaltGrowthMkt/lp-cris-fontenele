@@ -126,7 +126,8 @@ mark {
 .js .why-card .pulse__line { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.4s cubic-bezier(.65,0,.35,1) .25s; }
 .js .why-card.is-in .pulse__line { stroke-dashoffset: 0; }
 
-.chips { list-style: none; padding: 0; margin: 0 0 var(--s-3); display: flex; flex-wrap: wrap; gap: var(--s-2); }
+/* Enumeração da copy, empilhada para ler como lista (a pontuação original fica no texto) */
+.chips { list-style: none; padding: 0; margin: 0 0 var(--s-3); display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-2); }
 .chips li {
   padding: var(--s-2) var(--s-3); border-radius: var(--r-md);
   background: rgba(245,240,232,.08); border: 1px solid rgba(245,240,232,.16);
@@ -143,6 +144,7 @@ mark {
   line-height: var(--lh-snug); color: var(--c-ink);
 }
 .insight__big span { display: block; color: var(--c-ink-2); }
+@media (max-width: 767px) { .band-dark .insight .insight__big { font-size: 1.25rem; } }
 .band-dark .insight .statement--accent { color: var(--c-accent); margin: var(--s-4) 0 0; }
 @media (min-width: 900px) { .insight { padding: var(--s-7); } .insight > * { max-width: 40rem; } }
 
@@ -208,7 +210,7 @@ mark {
 .bio__cred { font-size: var(--fs-body-sm); color: var(--c-ink-2); }
 
 /* --- Seção 6: avaliação, cards em três tempos e logística --- */
-.eval { list-style: none; padding: 0; margin: 0 0 var(--s-4); display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.eval { list-style: none; padding: 0; margin: 0 0 var(--s-4); display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-2); }
 .eval li {
   padding: var(--s-2) var(--s-4); border-radius: var(--r-pill);
   background: var(--c-surface); border: 1px solid var(--c-line-strong);
@@ -232,7 +234,8 @@ mark {
   background: var(--c-accent-soft);
   font-family: var(--f-display); font-style: italic; font-size: var(--fs-body); line-height: var(--lh-snug);
 }
-.how-card__result { font-weight: 600; }
+/* Exemplo da vida real dentro da frase */
+.eg { font-family: var(--f-display); font-style: italic; font-size: 1.06em; color: var(--c-ink); }
 
 .facts {
   list-style: none; margin: var(--s-6) 0 0; padding: var(--s-2) var(--s-5);
