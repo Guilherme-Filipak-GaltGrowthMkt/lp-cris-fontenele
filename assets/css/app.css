@@ -90,7 +90,6 @@ mark {
 }
 .statement span { display: block; }
 .statement span + span { color: var(--c-ink-2); }
-.band-dark .statement--accent { color: var(--c-accent-dark); margin: 0; }
 .band-dark .statement--light { color: var(--c-on-dark); }
 
 /* --- 3.9 Ponte de leitura --- */
@@ -145,7 +144,6 @@ mark {
 }
 .insight__big span { display: block; color: var(--c-ink-2); }
 @media (max-width: 767px) { .band-dark .insight .insight__big { font-size: 1.25rem; } }
-.band-dark .insight .statement--accent { color: var(--c-accent); margin: var(--s-4) 0 0; }
 @media (min-width: 900px) { .insight { padding: var(--s-7); } .insight > * { max-width: 40rem; } }
 
 .step__n {
@@ -209,7 +207,7 @@ mark {
 @media (min-width: 900px) { .bio__id { grid-template-columns: 9rem 1fr; } }
 .bio__cred { font-size: var(--fs-body-sm); color: var(--c-ink-2); }
 
-/* --- Seção 6: avaliação, cards em três tempos e logística --- */
+/* --- Seção 6: avaliação, cards em três tempos, resultados e logística --- */
 .eval { list-style: none; padding: 0; margin: 0 0 var(--s-4); display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-2); }
 .eval li {
   padding: var(--s-2) var(--s-4); border-radius: var(--r-pill);
@@ -234,12 +232,24 @@ mark {
   background: var(--c-accent-soft);
   font-family: var(--f-display); font-style: italic; font-size: var(--fs-body); line-height: var(--lh-snug);
 }
-/* Exemplo da vida real dentro da frase */
-.eg { font-family: var(--f-display); font-style: italic; font-size: 1.06em; color: var(--c-ink); }
+.gains {
+  margin: var(--s-6) 0 0; padding: var(--s-5);
+  background: var(--c-surface-alt); border-radius: var(--r-lg);
+}
+.gains h3 { margin: 0 0 var(--s-3); font-size: 1.25rem; }
+.gains ul { list-style: none; padding: 0; margin: 0; }
+.gains li { position: relative; padding: var(--s-2) 0 var(--s-2) var(--s-5); }
+.gains li::before {
+  content: ""; position: absolute; left: 0; top: calc(var(--s-2) + .62em);
+  width: 6px; height: 6px; border-radius: 50%; background: var(--c-accent);
+}
+@media (min-width: 900px) {
+  .gains { padding: var(--s-6); }
+  .gains ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s-7); }
+}
 
 .facts {
-  list-style: none; margin: var(--s-6) 0 0; padding: var(--s-2) var(--s-5);
-  background: var(--c-surface-alt); border-radius: var(--r-lg);
+  list-style: none; margin: var(--s-5) 0 0; padding: 0;
   font-size: var(--fs-body-sm); color: var(--c-ink-2);
 }
 .facts li { position: relative; padding: var(--s-3) 0 var(--s-3) var(--s-5); }
@@ -249,7 +259,7 @@ mark {
   width: 6px; height: 6px; border-radius: 50%; background: var(--c-accent);
 }
 @media (min-width: 900px) {
-  .facts { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s-7); padding: var(--s-3) var(--s-6); }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s-7); }
   .facts li:nth-child(2) { border-top: 0; }
 }
 
@@ -311,19 +321,7 @@ mark {
 .closing h2 { font-size: calc(var(--fs-h2) * 1.15); }
 .closing__inner > * { max-width: 38rem; }
 .closing .closing__lead { color: var(--c-on-dark); font-size: var(--fs-body-lg); font-weight: 500; }
-.closing .tried {
-  font-family: var(--f-display); font-style: italic; font-size: var(--fs-h3);
-  line-height: var(--lh-snug); color: var(--c-on-dark-2);
-}
-.tried s { text-decoration-thickness: 2px; text-decoration-color: var(--c-accent-dark); }
 .closing__rule { border: 0; border-top: 1px solid rgba(245,240,232,.18); margin: var(--s-6) 0; }
-.paths { display: grid; gap: var(--s-3); margin: var(--s-5) 0 0; }
-@media (min-width: 560px) { .paths { grid-template-columns: 1fr 1fr; } }
-.closing .paths p {
-  margin: 0; padding: var(--s-4);
-  border: 1px solid rgba(245,240,232,.22); border-radius: var(--r-md);
-  color: var(--c-on-dark);
-}
 .closing .statement { font-size: var(--fs-h2); margin-top: var(--s-7); }
 
 /* --- Rodapé --- */
