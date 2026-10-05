@@ -31,26 +31,27 @@
 .btn--ghost-on-dark:hover{background:rgba(245,240,232,.08);color:var(--c-on-dark)}
 .btn--block,.btn--block-m{display:flex;width:100%}
 @media (min-width:768px){.btn--block-m{display:inline-flex;width:auto}}
-.hero{position:relative;isolation:isolate;min-height:100svh;display:flex;align-items:flex-end;background:var(--c-dark);color:var(--c-on-dark)}
-.hero__media{position:absolute;inset:0 0 auto 0;height:min(100%,177.78vw);z-index:-2}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:100svh;display:flex;align-items:flex-end;background:var(--c-dark);color:var(--c-on-dark)}
+.hero__media{position:absolute;inset:0 0 auto 0;height:177.78vw;z-index:-2}
 .hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 0;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
-/* Mobile: o texto começa logo abaixo do queixo (31% da altura da foto). Medidas em vw porque a foto acompanha a largura da tela.
+/* Mobile: o queixo fica em 31% da altura da foto; o escurecimento sobe a partir de 32% e o texto começa em 37,7% (67vw). Medidas em vw porque a foto acompanha a largura da tela.
    O escurecimento fica na própria foto, com os pontos amarrados ao rosto, para valer em qualquer aparelho. */
-.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,16,.40) 0%,rgba(20,19,16,.08) 14%,rgba(20,19,16,.12) 28%,rgba(20,19,16,.82) 33.5%,rgba(20,19,16,.94) 58%)}
-.hero__content{width:100%;padding-top:64vw;padding-bottom:var(--s-6)}
+.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,16,.30) 0%,rgba(20,19,16,.06) 12%,rgba(20,19,16,.08) 32%,rgba(20,19,16,.82) 37%,rgba(20,19,16,.94) 58%)}
+.hero__content{width:100%;padding-top:67vw;padding-bottom:var(--s-6)}
 .hero .overline{color:var(--c-on-dark-2)}
 .hero .overline::before{background:var(--c-accent-dark)}
 .hero h1{color:var(--c-on-dark)}
 .hero__hl{color:var(--c-accent-dark)}
+.hero p .hero__hl{font-weight:600}
 .hero p{color:var(--c-on-dark)}
 .hero__actions{display:grid;gap:var(--s-3);margin:var(--s-5) 0}
 .hero :focus-visible{outline-color:var(--c-accent-dark)}
 /* Telas baixas (Safari com barras, celulares menores): hero mais compacto para o botão principal caber na primeira tela */
 @media (max-width:767px) and (max-height:760px){
-.hero__content{padding-top:60vw}
-.hero h1{font-size:1.75rem;margin-bottom:var(--s-3)}
-.hero .overline{margin-bottom:var(--s-3)}
-.hero p{margin-bottom:var(--s-3)}
+.hero__content{padding-top:66vw}
+.hero h1{font-size:1.625rem;margin-bottom:var(--s-3)}
+.hero .overline{margin-bottom:var(--s-2)}
+.hero p{margin-bottom:var(--s-3);font-size:.9375rem;line-height:1.5}
 .hero__actions{margin:var(--s-4) 0;gap:var(--s-2)}
 }
 .seals{display:flex;flex-wrap:wrap;gap:var(--s-1) 0;list-style:none;padding:0;margin:0 0 0 -1.25em;clip-path:inset(0 0 0 1.25em);font-size:var(--fs-caption);color:var(--c-ink-3)}
@@ -106,9 +107,9 @@
   <div class="wrap hero__content">
     <p class="overline">TERAPIA PARA ANSIEDADE · PSICÓLOGA CLÍNICA · CRP 05/79685</p>
     <h1><span class="hero__hl">Psicoterapia para ansiedade:</span> compreenda o que você sente e desenvolva outras formas de lidar.</h1>
-    <p>Para quem convive com a mente acelerada, antecipa o que ainda não aconteceu e encerra o dia com a sensação de que faltou alguma coisa, mesmo tendo feito tudo.</p>
+    <p>Para quem convive com a <span class="hero__hl">mente acelerada</span>, antecipa <span class="hero__hl">o que ainda não aconteceu</span> e encerra o dia com a sensação de que <span class="hero__hl">faltou alguma coisa</span>, mesmo tendo feito tudo.</p>
     <div class="hero__actions">
-      <a class="btn btn--primary btn--block-m" href="https://wa.me/5521972045625">Falar com a Cris no WhatsApp</a>
+      <a class="btn btn--primary btn--block-m" href="https://wa.me/5521972045625?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20mais%20informa%C3%A7%C3%B5es.">Falar com a Cris no WhatsApp</a>
       <a class="btn btn--ghost-on-dark btn--block-m" href="#como-funciona">Entender como funciona</a>
     </div>
     <ul class="seals">
@@ -222,7 +223,7 @@
       </article>
     </div>
     <div class="cta">
-      <a class="btn btn--primary btn--block-m" href="https://wa.me/5521972045625">Falar com a Cris no WhatsApp</a>
+      <a class="btn btn--primary btn--block-m" href="https://wa.me/5521972045625?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20mais%20informa%C3%A7%C3%B5es.">Falar com a Cris no WhatsApp</a>
     </div>
   </div>
 </section>
@@ -329,7 +330,7 @@
 </ul>
 <!-- /partial:secao-6-logistica -->
     <div class="cta">
-      <a class="btn btn--primary btn--block-m" href="https://wa.me/5521972045625">Falar com a Cris no WhatsApp</a>
+      <a class="btn btn--primary btn--block-m" href="https://wa.me/5521972045625?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20mais%20informa%C3%A7%C3%B5es.">Falar com a Cris no WhatsApp</a>
     </div>
   </div>
 </section>
@@ -412,7 +413,7 @@
       </details>
     </div>
     <div class="cta">
-      <a class="btn btn--primary btn--block-m" href="https://wa.me/5521972045625">Falar com a Cris no WhatsApp</a>
+      <a class="btn btn--primary btn--block-m" href="https://wa.me/5521972045625?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20mais%20informa%C3%A7%C3%B5es.">Falar com a Cris no WhatsApp</a>
     </div>
   </div>
 </section>
@@ -434,7 +435,7 @@
     <p>Nela eu procuro entender sua história e o momento que você atravessa, e você conhece o modo como eu trabalho. Ao final, decidimos com clareza se o acompanhamento faz sentido para você.</p>
     <p class="statement statement--light">Você não precisa chegar ao limite para procurar ajuda.</p>
     <div class="cta">
-      <a class="btn btn--on-dark btn--block-m" href="https://wa.me/5521972045625">Falar com a Cris no WhatsApp</a>
+      <a class="btn btn--on-dark btn--block-m" href="https://wa.me/5521972045625?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20mais%20informa%C3%A7%C3%B5es.">Falar com a Cris no WhatsApp</a>
     </div>
   </div>
 </section>
@@ -452,9 +453,9 @@
 <!-- /partial:rodape -->
 
 <div class="actionbar" data-actionbar hidden>
-  <a class="btn btn--primary btn--block" href="https://wa.me/5521972045625">Falar com a Cris</a>
+  <a class="btn btn--primary btn--block" href="https://wa.me/5521972045625?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20mais%20informa%C3%A7%C3%B5es.">Falar com a Cris</a>
 </div>
-<a class="wa-bubble" href="https://wa.me/5521972045625" aria-label="Falar com a Cris no WhatsApp">
+<a class="wa-bubble" href="https://wa.me/5521972045625?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20mais%20informa%C3%A7%C3%B5es." aria-label="Falar com a Cris no WhatsApp">
   <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.42 9.42 0 0 1-1.45-5.02c0-5.2 4.24-9.43 9.45-9.43a9.4 9.4 0 0 1 9.44 9.44c0 5.2-4.24 9.43-9.45 9.43m8.04-17.47A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.6 23.6l6-1.57a11.33 11.33 0 0 0 5.44 1.39h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.89-3.33-8.03"/></svg>
 </a>
 
