@@ -3,6 +3,12 @@
    Design tokens. Todos os contrastes validados (WCAG AA).
    ============================================================ */
 
+/* Reserva da Fraunces enquanto ela carrega: Georgia na mesma largura,
+   para os títulos não mudarem de quebra de linha (CLS). */
+@font-face { font-family: "Fraunces Fallback"; src: local("Georgia"); font-weight: 400; size-adjust: 93%; ascent-override: 105.2%; descent-override: 27.4%; line-gap-override: 0%; }
+@font-face { font-family: "Fraunces Fallback"; src: local("Georgia Italic"), local("Georgia-Italic"); font-weight: 400; font-style: italic; size-adjust: 93%; ascent-override: 105.2%; descent-override: 27.4%; line-gap-override: 0%; }
+@font-face { font-family: "Fraunces Fallback"; src: local("Georgia Bold"), local("Georgia-Bold"); font-weight: 600 700; size-adjust: 93%; ascent-override: 105.2%; descent-override: 27.4%; line-gap-override: 0%; }
+
 :root {
   /* --- Cor: superfícies --- */
   --c-bg:            #FAF7F2;  /* fundo padrão, creme quente */
@@ -30,7 +36,7 @@
   --c-focus:         #A8452A;
 
   /* --- Tipografia --- */
-  --f-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --f-display: "Fraunces", "Fraunces Fallback", Georgia, "Times New Roman", serif;
   --f-body:    "Figtree", system-ui, -apple-system, sans-serif;
 
   --fs-overline: 0.6875rem;  /* 11px */

@@ -1,0 +1,5 @@
+# Rastreadores de busca e de IA liberados (Google, Bing, ChatGPT, Perplexity, Claude, Gemini)
+User-agent: *
+Allow: /
+
+Sitemap: https://guilherme-filipak-galtgrowthmkt.github.io/lp-cris-fontenele/sitemap.xml

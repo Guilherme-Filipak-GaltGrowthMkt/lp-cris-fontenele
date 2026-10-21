@@ -4,6 +4,11 @@
 !/.gitignore
 !/.nojekyll
 !/index.html
+!/robots.txt
+!/sitemap.xml
+!/llms.txt
+!/favicon.ico
+!/apple-touch-icon.png
 !/burnout/
 !/assets/
 /assets/img/originais/
