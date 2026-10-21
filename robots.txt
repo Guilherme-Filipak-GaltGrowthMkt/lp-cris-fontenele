@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://guilherme-filipak-galtgrowthmkt.github.io/lp-cris-fontenele/sitemap.xml
+Sitemap: https://terapia.crisfontenelepsi.com.br/sitemap.xml
