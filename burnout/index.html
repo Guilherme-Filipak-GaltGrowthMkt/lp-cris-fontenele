@@ -97,10 +97,14 @@
 <noscript><link rel="stylesheet" href="../assets/css/app.css"></noscript>
 <script>if('IntersectionObserver' in window)document.documentElement.classList.add('js')</script>
 
-<!-- Google Ads: tag de conversão (UMA só). Pendente. Ao instalar, definir também:
-     <script>window.WA_CONVERSION = 'AW-XXXXXXXXX/XXXXXXXXXXXX';</script>
-     O disparo no clique do WhatsApp já está em assets/js/app.js. -->
-<!-- Microsoft Clarity: mesmo projeto do site atual. Pendente. -->
+<!-- Google Tag Manager: mesmo container do site institucional. Conversão do Google Ads (clique em wa.me,
+     filtrado pelo hostname terapia.crisfontenelepsi.com.br) e Microsoft Clarity ficam configurados no GTM.
+     Não definir window.WA_CONVERSION: o disparo de assets/js/app.js duplicaria a conversão. -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T72CK7ZT');</script>
 
 <script src="../assets/js/app.js" defer></script>
 
@@ -208,6 +212,7 @@
 </script>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T72CK7ZT" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 
 <main>
 
